@@ -39,7 +39,7 @@
     /* width: 100%; */
     position: absolute;
     display: flex;
-    top: 15px;
+    top: 19px;
     left: 1050px;
     gap: 25px;
     z-index: 5;
@@ -49,14 +49,14 @@
     display: flex;
     position: absolute;
     top: 0;
-    left: 542px;
+    left: 397px;
 }
 
 .box {
     display: flex;
     position: fixed;
     height: 86px;
-    width: 1000px;
+    width: 1285px;
     z-index: -1;
 }
   
@@ -67,7 +67,7 @@
     left: 0;
     position: fixed;
     top: 0;
-    width: 1001px;
+    width: 1287px;
     z-index: -1;
 }
 
@@ -75,7 +75,7 @@
     width: 25%;
     position: relative;
     display: flex;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .link {

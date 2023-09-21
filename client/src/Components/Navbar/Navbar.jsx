@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <div className={styles.divStyle}>
                 <div className="box">
-                    <img className="vector" alt="Vector" src="https://c.animaapp.com/APWty8RL/img/vector-1.svg" />
+                    <img className="vector" alt="Vector" src="https://c.animaapp.com/lVZ8YDxz/img/vector-4.svg" />
                 </div>
             </div>
         </div>
