@@ -1,0 +1,59 @@
+.container {
+    color: #000;
+}
+.tableContainer {
+    display: flex;
+    width: 75%;
+    position: relative;
+    margin-left: 10%;
+}
+
+.tableContainer table {
+    margin-left: 10px;
+    border-collapse: collapse;
+}
+
+.tableContainer td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.tdFirst {
+    width: 10%;
+}
+
+.imageContainer {
+    width: 100%;
+    position: relative;
+}
+
+.imageContainer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding-left: 100px;
+    justify-content: center;
+}
+
+.text {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #000;
+}

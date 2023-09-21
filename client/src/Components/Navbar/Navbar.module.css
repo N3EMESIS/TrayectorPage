@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.divLeft {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px;
+    width: 700px;
+    background-color: #fff;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-color: #fff;
+    border-style: solid;
+    margin: 0;
+}
+
+.leftContainer {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+.divRight {
+    display: flex;
+    position: relative;
+    padding: 40px;
+    width: 100%;
+}
+
+.rightContainer {
+    /* width: 100%; */
+    position: absolute;
+    display: flex;
+    top: 15px;
+    left: 1050px;
+    gap: 25px;
+    z-index: 5;
+}
+
+.divStyle {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 542px;
+}
+
+.box {
+    display: flex;
+    position: fixed;
+    height: 86px;
+    width: 1000px;
+    z-index: -1;
+}
+  
+.box .vector {
+    display: flex;
+    position: fixed;
+    height: 87px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 1001px;
+    z-index: -1;
+}
+
+.image {
+    width: 25%;
+    position: relative;
+    display: flex;
+    margin-left: 150px;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.link:hover {
+    background-color: #EC671B;
+}
+
+.link--active {
+    background-color: #EC671B !important;
+}
