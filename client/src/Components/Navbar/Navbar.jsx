@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className={styles.container}>
             <div className={styles.divLeft}>
                 <div className={styles.leftContainer}>
-                    <img className={styles.image} src="https://i.postimg.cc/KYHdJdYG/LOGO.png" alt='logo' />
+                    <img className={styles.image} src="https://i.postimg.cc/025c4hjh/LOGO.png" alt='logo' />
                 </div>
             </div>
             <div className={styles.divRight}>

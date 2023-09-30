@@ -11,8 +11,8 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 14px;
-    width: 700px;
+    padding: 12px;
+    width: 600px;
     background-color: #fff;
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
@@ -31,7 +31,7 @@
 .divRight {
     display: flex;
     position: relative;
-    padding: 40px;
+    padding: 45px;
     width: 100%;
 }
 
@@ -39,7 +39,7 @@
     /* width: 100%; */
     position: absolute;
     display: flex;
-    top: 19px;
+    top: 28px;
     left: 1050px;
     gap: 25px;
     z-index: 5;
@@ -82,8 +82,8 @@
     text-decoration: none;
     color: #fff;
     background-color: transparent;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 5px;
+    border-radius: 15px;
 }
 
 .link:hover {
