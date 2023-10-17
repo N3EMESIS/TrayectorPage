@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    height: 41.41vw;
+    background-image: url('./fondo\ login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.loginContainer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin: 0;
+}
+
+.registerButton {
+    border: none;
+    background: none;
+    color: #3663ad;
+    transition: transform 0.2s;
+}
+
+.registerButton:hover {
+    color: #EC671B;
+    transform: scale(1.1);
+}
+
+.googleButton {
+    border: none;
+    background: none;
+    color: #3663ad;
+    transition: transform 0.2s;
+}
+
+.googleButton:hover {
+    color: #ec671b;
+    transform: scale(1.1);
+}
+
+.registerContainer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.backIcon {
+    display: flex;
+    padding: 7px;
+    color: #3663AD;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.backIcon:hover {
+    transform: translateX(-5px);
+    color: #ec671b;
+}
+
+.input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.submitButton {
+    background: #3663ad;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background: #ec671b;
+}
+
+.buttonRegister {
+    background: #3663ad;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonRegister:hover {
+    background: #ec671b;
+}

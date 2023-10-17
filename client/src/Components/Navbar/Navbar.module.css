@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../../public/fonts/poppins/Poppins-ExtraBold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     width: 100%;
+    font-family: 'Poppins';
+    font-size: 18px;
 }
 
 .divLeft {
@@ -39,8 +48,8 @@
     /* width: 100%; */
     position: absolute;
     display: flex;
-    top: 28px;
-    left: 1050px;
+    top: 32px;
+    left: 1000px;
     gap: 25px;
     z-index: 5;
 }
@@ -82,7 +91,7 @@
     text-decoration: none;
     color: #fff;
     background-color: transparent;
-    padding: 5px;
+    padding: 2px;
     border-radius: 15px;
 }
 

@@ -1,15 +1,33 @@
-const { Admin } = require('../../db');
+const { Client } = require("../../db");
+const bcrypt = require("bcrypt");
 
-async function updateAdmin(id, usuario, contraseña) {
-    const admin = await Admin.findOne({ where: { id } });
+async function createClient(
+  email,
+  contraseña,
+  nombre,
+  apellido,
+  ciudad,
+  direccion,
+  telefono,
+  edad,
+  dni
+) {
+  //const saltRounds = 10;
+  // const hashedPassword = await bcrypt.hash(contraseña, saltRounds);
 
-    if (!admin) throw new Error(`No se encontró el admin con el ID ${id}`);
+  const client = await Client.create({
+    email,
+    //contraseña: hashedPassword,
+    contraseña,
+    nombre,
+    apellido,
+    ciudad,
+    direccion,
+    telefono,
+    edad,
+    dni,
+  });
+  return client;
+}
 
-    if (usuario) admin.usuario = usuario;
-    if (contraseña) admin.contraseña = contraseña;
-
-    await admin.save();
-    return admin;
-};
-
-module.exports = updateAdmin;
+module.exports = createClient;

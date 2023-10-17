@@ -10,12 +10,12 @@ module.exports = (sequelize) => {
         autoIncrement: true,
       },
       email: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
       contraseña: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       nombre: {
         type: DataTypes.STRING,
@@ -25,24 +25,12 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      ciudad: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      direccion: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
       telefono: {
         type: DataTypes.STRING,
         allowNull: true,
       },
       edad: {
         type: DataTypes.INTEGER,
-        allowNull: true,
-      },
-      dni: {
-        type: DataTypes.STRING,
         allowNull: true,
       },
       imagen: {

@@ -3,9 +3,6 @@ import axios from "axios";
 import {
 	GET_ALL_COURSES,
 	GET_COURSE_BY_ID,
-	CLEAN_DETAIL,
-	ADD_CART,
-	UPDATE_CART,
 	FILTER_NAME_COURSE,
 	FILTER_PRICE_COURSE,
 	SET_PAGE,
@@ -28,11 +25,8 @@ import {
 	LOGOUT,
 	GET_ALL_CLIENTS,
 	DELETE_CLIENT,
-	CLEAN_CART,
 	GET_MP_LINK,
 	CHANGE_LABEL,
-	UPDATE_ADDRESS,
-	CLEAN_ADDRESS,
 	GET_ORDERS,
 	GET_ALL_ADMIN_CLIENTS,
 	GET_ALL_COURSES_CLIENTS,
@@ -50,9 +44,9 @@ export const createCourse = (course) => {
 			const res = await axios.post(`/product`, course);
 			const newOrder = res.data;
 			Pop_up(
-				"success",
-				"Product created",
-				"Your product is already published",
+				"Realizado",
+				"Curso creado",
+				"Tu curso esta publicado!",
 				"bottom"
 			);
 		} catch (error) {
@@ -94,39 +88,6 @@ export const getCourseById = (id_course) => {
 	};
 };
 
-/* LIMPIAR DETAILS */
-export const cleanDetail = () => ({ type: CLEAN_DETAIL });
-
-/* OBETENER COMENTARIOS DE LOS CLIENTES */
-// export const getCustomerComments = () => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/pagereview`);
-// 			const comm = res.data;
-// 			dispatch({ type: GET_CUSTOMER_COMMENTS, payload: comm });
-// 		} catch (error) {
-// 			alert(error.response.data);
-// 		}
-// 	};
-// };
-
-/* AÑADIR CURSO A LA CART, CURSO */
-export const addCartCourse = (course) => ({
-	type: ADD_CART,
-	payload: course,
-});
-
-/* ACTUALIZA CART*/
-export const newCart = (updateCart) => ({
-	type: UPDATE_CART,
-	payload: updateCart,
-});
-
-export const cleanCart = () => ({
-	type: CLEAN_CART,
-	payload: [],
-});
-
 /* ELIMINAR CURSO POR ID */
 export const dropCourse = (id) => ({ type: DROP_COURSE, payload: id });
 
@@ -156,13 +117,6 @@ export const changePage = (number) => {
 	return { type: SET_PAGE, payload: number };
 };
 
-export const updateAddress = (address) => {
-	return { type: UPDATE_ADDRESS, payload: address };
-};
-
-export const cleanAddress = () => {
-	return { type: CLEAN_ADDRESS };
-};
 
 /* CREAR ORDEN */
 export const createOrder = (order) => {
@@ -219,7 +173,7 @@ export const getOrderDetail = (id_order) => {
 export const validateLogin = (user) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/client/checkclient`, user);
+			const res = await axios.post(`http://localhost:3001/client/checkclient`, user);
 			const userDB = res.data;
 			return dispatch({ type: VALIDATE_LOGIN, payload: userDB });
 		} catch (error) {
@@ -264,7 +218,7 @@ export const getUserDataByEmail = (email) => {
 export const registerUser = (user) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/client`, user);
+			const res = await axios.post(`http://localhost:3001/client`, user);
 			const userDB = res.data;
 			return dispatch({ type: REGISTER_USER, payload: userDB });
 		} catch (error) {
@@ -355,71 +309,6 @@ export const deleteClient = (client_id) => {
 	};
 };
 
-/* CREAR COMENTARIO DE CLIENTE */
-// export const createReview = (newReview) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.post(`/review`, newReview);
-// 			const reviewDB = res.data;
-// 			return dispatch({ type: CREATE_REVIEW, payload: reviewDB });
-// 		} catch (error) {
-// 			alert(error.response.data);
-// 		}
-// 	};
-// };
-
-/* MODIFICAR COMENTARIO */
-// export const updateReview = (review__id, newReview) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.patch(`/review/${review__id}`, newReview);
-// 			const reviewDB = res.data;
-// 			return dispatch({ type: UPDATE_REVIEW, payload: reviewDB });
-// 		} catch (error) {
-// 			alert(error.response.data);
-// 		}
-// 	};
-// };
-
-/* ELIMINAR COMENTARIO */
-// export const deleteReview = (review__id) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.delete(`/review/${review__id}`);
-// 			const reviewDB = res.data;
-// 			return dispatch({ type: DELETE_REVIEW, payload: reviewDB });
-// 		} catch (error) {
-// 			alert(error.response.data);
-// 		}
-// 	};
-// };
-
-// OBTENER COMENTARIOS DEL CLIENTE POR ID
-// export const getClientReviews = (id_client) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/review/client/${id_client}`);
-// 			const reviewsDB = res.data;
-// 			return dispatch({ type: GET_CLIENT_REVIEWS, payload: reviewsDB });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
-/* OBTENER COMENTARIO DE CLIENTE POR ID  */
-// export const getClientReview = (id_review) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/review/${id_review}`);
-// 			const reviewDB = res.data;
-// 			return dispatch({ type: GET_CLIENT_REVIEW, payload: reviewDB });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
 //ORDENAMIENTO Y FILTRADO
 export const orderAndFilter = (filterByType, sort) => {
 	return async function (dispatch) {
@@ -435,57 +324,6 @@ export const orderAndFilter = (filterByType, sort) => {
 	};
 };
 
-//OBTENER FAVORITOS
-// export const getFavorites = (id_client) => {
-//   return async function (dispatch) {
-//     try {
-//       const res = await axios.get(`/favorite/client/${id_client}`);
-//       const clientFavorites = res.data;
-//       return dispatch({ type: GET_FAVORITES, payload: clientFavorites });
-//     } catch (error) {
-//       console.log(error.response.data);
-//     }
-//   };
-// };
-
-//CREAR FAVORITOS
-// export const createFavoriteAction = (favorite) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.post(`/favorite`, favorite);
-// 			const favoriteDB = res.data;
-// 			return dispatch({ type: CREATE_FAVORITE, payload: favoriteDB });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
-//ELIMINAR FAVORITOS
-// export const deleteFavoriteAction = (product_id) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.delete(`/favorite/${product_id}`);
-// 			const favorite = res.data;
-// 			return dispatch({ type: DELETE_FAVORITE, payload: favorite.id });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
-// export const getClientAllFavorites = (client_id) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/favorite/client/${client_id}`);
-// 			const favorites = res.data;
-// 			return dispatch({ type: GET_CLIENT_FAVORITE, payload: favorites });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
 export const loginUser = () => {
 	return {
 		type: LOGIN,
@@ -498,74 +336,6 @@ export const logoutUser = () => {
 	};
 };
 
-// export const getCourseReviews = (id_course) => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/review/course/${id_course}`);
-// 			const productReviews = res.data;
-// 			return dispatch({ type: GET_PRODUCT_REVIEWS, payload: productReviews });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-// export const getAllReviews = () => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/review`);
-// 			const reviews = res.data;
-// 			return dispatch({ type: GET_REVIEWS, payload: reviews });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-// export const getAllPageReviews = () => {
-// 	return async function (dispatch) {
-// 		try {
-// 			const res = await axios.get(`/pagereview`);
-// 			const pageReviews = res.data;
-// 			return dispatch({ type: GET_PAGE_REVIEWS, payload: pageReviews });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
-// export const createPageReview = (review) => {
-// 	return async (dispatch) => {
-// 		try {
-// 			const res = await axios.post("/pagereview", review);
-// 			// const pageReview = res.data;
-// 			// return dispatch({ type: CREATE_PAGE_REVIEW, payload: pageReview });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-// export const updatePageReview = (review) => {
-// 	return async (dispatch) => {
-// 		try {
-// 			const res = await axios.patch("/pagereview", review);
-// 			// const pageReview = res.data;
-// 			// return dispatch({ type: CREATE_PAGE_REVIEW, payload: pageReview });
-// 		} catch (error) {
-// 			console.log(error.response.data);
-// 		}
-// 	};
-// };
-
-// export const getClientPageReviews = (id) => {
-//   return async function (dispatch) {
-//     try {
-//       const res = await axios.get(`/pagereview/client/${id}`);
-//       const clientPageReview = res.data;
-//       dispatch({ type: GET_CLIENT_PAGE_REVIEW, payload: clientPageReview });
-//     } catch (error) {
-//       console.log(error.response.data);
-//     }
-//   };
-// };
 
 export const getAllClients = () => {
 	return async function (dispatch) {
@@ -603,21 +373,6 @@ export const sendEmail = (form, type) => {
 		}
 	};
 };
-
-// export const getCreatedOrderId = (order) => {
-//   return async (dispatch) => {
-//     try {
-//       const res = await axios.get(`/order`);
-//       const orders = res.data;
-//       const foundOrder = orders.find((o) => o.ClientId === order.ClientId);
-
-//       const orderId = foundOrder ? foundOrder.id : null;
-//       dispatch({ type: SET_CREATED_ORDER_ID, payload: orderId });
-//     } catch (error) {
-//       // Manejo de errores
-//     }
-//   };
-// };
 
 export const ChangeLabel = (id) => {
 	return { type: CHANGE_LABEL, payload: id };

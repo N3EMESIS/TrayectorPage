@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url('../../../public/fonts/poppins/Poppins-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../../../public/fonts/poppins/Poppins-Bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-semibold';
+  src: url('../../../public/fonts/poppins/Poppins-SemiBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-black';
+  src: url('../../../public/fonts/poppins/Poppins-Black.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundImage {
+  margin: 0;
+}
+
+.img {
+  opacity: 0.9;
+}
+
+.titleImage {
+  position: relative;
+  top: -450px;
+  font-size: 70px;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  right: 250px;
+}
+
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -200px;
+}
+
+.container {  
+    display: grid;
+    /* width: 75%; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "foto1 foto2 foto3"
+      "foto4 foto5 foto6"
+      "foto7 foto8 foto9";
+    justify-items: center;
+  }
+  
+.foto1 { grid-area: foto1; }
+  
+.foto2 { grid-area: foto2; }
+  
+.foto3 { grid-area: foto3; }
+  
+.foto4 { grid-area: foto4; }
+  
+.foto5 { grid-area: foto5; }
+  
+.foto6 { grid-area: foto6; }
+
+.foto7 { grid-area: foto7; }
+
+.foto8 { grid-area: foto8; }
+
+.foto9 { grid-area: foto9; }
+  
+.title {
+  font-family: 'Poppins-bold';
+  color: #EC671B;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.subtitle {
+  font-family: 'Poppins-regular';
+  font-size: 19px;
+}
+
+.name {
+  font-family: 'Poppins-black';
+  font-size: 20px;
+}
+
+.p {
+  font-family: 'Poppins-semibold';
+  font-size: 17px;
+}

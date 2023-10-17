@@ -1,9 +1,6 @@
 import {
 	GET_ALL_COURSES,
 	GET_COURSE_BY_ID,
-	CLEAN_DETAIL,
-	ADD_CART,
-	UPDATE_CART,
 	FILTER_NAME_COURSE,
 	GET_CLIENT_DATA,
 	SET_PAGE,
@@ -19,11 +16,8 @@ import {
 	LOGIN,
 	GET_ALL_CLIENTS,
 	DELETE_CLIENT,
-	CLEAN_CART,
 	GET_MP_LINK,
 	CHANGE_LABEL,
-	UPDATE_ADDRESS,
-	CLEAN_ADDRESS,
 	GET_ORDERS,
 	GET_ALL_ADMIN_CLIENTS,
 	GET_ALL_COURSES_CLIENTS,
@@ -32,15 +26,12 @@ import {
 	ADMIN_LOG_OUT,
     UPDATE_COURSE,
 } from "./Actions/types";
-const carritoa = JSON.parse(localStorage.getItem("carrito")) || [];
 const coursesa = JSON.parse(localStorage.getItem("courses")) || [];
-const address = localStorage.getItem("address") || "";
 
 const initialState = {
 	courses: [],
 	filteredCourses: [],
 	course: coursesa,
-	cart: carritoa,
 	currentPage: 0,
 	itemsPerPage: 1,
 	allOrders: [],
@@ -60,13 +51,12 @@ const initialState = {
 		Courses: false,
 		Orders: false,
 	},
-	address: address,
+
 	clientsAdmin: [],
 	coursesAdmin: [],
 	deleteCourse: [],
 	admin: {},
     updatedCourse : ''
-	// createdOrderId: null,
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -78,7 +68,6 @@ export default function rootReducer(state = initialState, action) {
 			};
 
 		case GET_ALL_COURSES:
-			// localStorage.setItem("products", JSON.stringify([...action.payload]));
 			return {
 				...state,
 				courses: [...action.payload],
@@ -107,9 +96,6 @@ export default function rootReducer(state = initialState, action) {
 			};
 		// Other authentication-related action cases
 
-		case CLEAN_DETAIL:
-			return { ...state, course: [] };
-
 		case FILTER_NAME_COURSE:
 			const filterCourses = state.courses.filter((course) => {
 				const courseName = course.nombre.toLowerCase();
@@ -117,35 +103,6 @@ export default function rootReducer(state = initialState, action) {
 				return courseName.includes(action.payload.toLowerCase());
 			});
 			return { ...state, courses: filterCourses };
-
-		case ADD_CART:
-			if (!state.cart.find((product) => product.id === action.payload.id)) {
-				return {
-					...state,
-					cart: [
-						...state.cart,
-						{
-							id: action.payload.id,
-							nombre: action.payload.nombre,
-							descripcion: action.payload.descripcion,
-							precio: action.payload.precio,
-							importe: action.payload.precio * action.quantity,
-							imagen: action.payload.imagen,
-						},
-					],
-				};
-			} else {
-				throw Error("You product is already in Cart!");
-			}
-
-		case UPDATE_CART:
-			return { ...state, cart: action.payload };
-
-		case CLEAN_CART:
-			return {
-				...state,
-				cart: [...action.payload],
-			};
 
 		case DROP_COURSE:
 			return {
@@ -176,8 +133,6 @@ export default function rootReducer(state = initialState, action) {
 			return { ...state, clientOrders: action.payload };
 
 		case DELETE_ORDER:
-			// const orderId = action.payload;
-			// const updatedOrders =
 			return {
 				...state,
 				clientOrders: [
@@ -212,20 +167,6 @@ export default function rootReducer(state = initialState, action) {
 			return {
 				...state,
 				MPLink: action.payload,
-			};
-
-		case UPDATE_ADDRESS:
-			localStorage.setItem("address", action.payload);
-			return {
-				...state,
-				address: action.payload,
-			};
-
-		case CLEAN_ADDRESS:
-			localStorage.removeItem("address");
-			return {
-				...state,
-				address: "",
 			};
 
 		case CHANGE_LABEL:

@@ -7,7 +7,7 @@ import { auth, googleProvider } from "../../../Firebase/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 
-const Login = () => {
+const LoginSignup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -114,4 +114,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default LoginSignup;

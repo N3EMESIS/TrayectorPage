@@ -36,7 +36,7 @@ const validationsForm = (initialForm) => {
 };
 /* */
 
-const Register = () => {
+const RegisterUser = () => {
   const { register, error, handleChange, handleBlur, handleSubmit } = useForm(
     initialForm,
     validationsForm
@@ -170,4 +170,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterUser;

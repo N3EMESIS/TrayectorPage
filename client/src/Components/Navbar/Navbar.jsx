@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getUserDataByEmail } from '../../Redux/Actions/actions';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../Firebase/firebase';
 import styles from './Navbar.module.css';
+
 
 const Navbar = () => {
     const location = useLocation();
@@ -9,6 +14,30 @@ const Navbar = () => {
     useEffect(() => {
         setActiveLink(location.pathname);
     }, [location]);
+
+    const dispatch = useDispatch();
+    const [email, setEmail] = useState("");
+
+    const handleLogout = () => {
+        localStorage.removeItem("email");
+        localStorage.removeItem("token");
+        signOut(auth)
+        .then(() => {
+            console.log("Signed out successfully");
+            window.location.reload();
+        })
+        .catch((error) => console.log(error));
+    };
+    const emailCurrent = localStorage.getItem("email");
+    useEffect(() => {
+        setEmail(localStorage.getItem("email"));
+    }, []);
+
+    useEffect(() => {
+        dispatch(getUserDataByEmail(email));
+    }, [email]);
+
+    const token = localStorage.getItem("token");
 
     return (
         <div className={styles.container}>
@@ -24,6 +53,7 @@ const Navbar = () => {
                     <Link className={`${styles.link} ${activeLink === '/servicios' && styles['link--active']}`} to='/servicios'>Servicios</Link>
                     <Link className={`${styles.link} ${activeLink === '/cursos' && styles['link--active']}`} to='/cursos'>Cursos</Link>
                     <Link className={`${styles.link} ${activeLink === '/contacto' && styles['link--active']}`} to='/contacto'>Contacto</Link>
+                    <Link className={`${styles.link} ${activeLink === '/perfil' && styles['link--active']}`} to='/loginOrRegister'>Iniciar Sesión</Link>
                 </div>
             </div>
             <div className={styles.divStyle}>

@@ -9,18 +9,13 @@ const getClientsHandler = async (req, res) => {
         if (nombre) {
             const client = await getClientByName(nombre);
             res.status(200).send(client);
-        } else {
-            res.status(400).send(`El usuario con el nombre ${nombre} no existe.`);
-        }
-        if (email) {
+        } else if (email) {
             const client = await getClientByEmail(email);
             res.status(200).send(client);
         } else {
-            res.status(400).send(`El usuario con el email ${email} no existe.`);
+            const allClients = await getAllClients();
+            res.status(200).send(allClients);
         }
-
-        const allClients = await getAllClients();
-        res.status(200).send(allClients);
     }
     catch (err) {
         res.status(500).send(`${err.message}`);
