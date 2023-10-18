@@ -1,9 +1,11 @@
+
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: black; */
-    height: 41.41vw;
+    height: 42.41vw;
     background-image: url('./fondo\ login.jpg');
     background-repeat: no-repeat;
     background-size: cover;

@@ -38,6 +38,7 @@ const Navbar = () => {
     }, [email]);
 
     const token = localStorage.getItem("token");
+    console.log(token);
 
     return (
         <div className={styles.container}>
@@ -51,9 +52,13 @@ const Navbar = () => {
                     <Link className={`${styles.link} ${activeLink === '/' && styles['link--active']}`} exact to='/'>Inicio</Link>
                     <Link className={`${styles.link} ${activeLink === '/nosotros' && styles['link--active']}`} to='/nosotros'>Nosotros</Link>
                     <Link className={`${styles.link} ${activeLink === '/servicios' && styles['link--active']}`} to='/servicios'>Servicios</Link>
-                    <Link className={`${styles.link} ${activeLink === '/cursos' && styles['link--active']}`} to='/cursos'>Cursos</Link>
+                    <Link className={`${styles.link} ${activeLink === '/cursos' && styles['link--active']}`} to='/cursos'>Academia Trayector</Link>
                     <Link className={`${styles.link} ${activeLink === '/contacto' && styles['link--active']}`} to='/contacto'>Contacto</Link>
-                    <Link className={`${styles.link} ${activeLink === '/perfil' && styles['link--active']}`} to='/loginOrRegister'>Iniciar Sesión</Link>
+                    {token === null ? (
+                        <Link className={`${styles.link} ${activeLink === '/login' && styles['link--active']}`} to='/loginOrRegister'>Iniciar Sesión</Link>
+                    ) : (
+                        <Link className={`${styles.link} ${activeLink === '/perfil' && styles['link--active']}`} to='/myProfile'>Perfil</Link>
+                    )}
                 </div>
             </div>
             <div className={styles.divStyle}>

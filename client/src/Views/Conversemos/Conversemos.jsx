@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './Conversemos.module.css';
-import whatsapp from './wsp.jpg';
+import diego from './Diego.jpg';
 
 const Conversemos = () => {
 
@@ -16,9 +16,18 @@ const Conversemos = () => {
     }, []);
 
     return(
-        <div className='p-4'>
+        <div className={styles.container}>
             <div data-tf-live="01HCQ27ZYM9Z3ZSTN4NQEXY3EV" className={styles.container}></div>
-            <img src={whatsapp} alt={'contact'} width='50%' />
+            <h3>Si prefieres puedes escribirnos a <a href=''>Whatsapp</a>{/* link wsp */} o contactar directamente con Diego:</h3>
+            <div className={styles.contactContainer}>
+                <img src={diego} alt={'contact'} width='20%' />
+                <div className={styles.divider}>
+                    <p>Diego Caceres</p>
+                    <p>MIT DE INNOVACIÓN</p>
+                    <p>dcaceres@trayector.com</p>
+                    <p>+51 996 501 515</p>
+                </div>
+            </div>
         </div>
     )
 }

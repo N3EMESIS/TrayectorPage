@@ -73,18 +73,18 @@ const LoginOrRegister = () => {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        // signInWithEmailAndPassword(auth, login.email, login.contraseña)
-        // .then((data) => {
-        //     setUserValue(data.user.email);
-        //     localStorage.setItem('email', data.user.email);
-        //     dispatch(validateLogin(login));
+        signInWithEmailAndPassword(auth, login.email, login.contraseña)
+        .then((data) => {
+            setUserValue(data.user.email);
+            localStorage.setItem('email', data.user.email);
+            dispatch(validateLogin(login));
             
-        //     if (userValue) {
-        //         dispatch(loginUser());
-        //         navigate('/');
-        //     }
-        // })
-        // .catch((err) => console.log(err));
+            if (userValue) {
+                dispatch(loginUser());
+                navigate('/');
+            }
+        })
+        .catch((err) => console.log(err));
         setUserValue(login.email);
         localStorage.setItem('email', login.email);
         dispatch(validateLogin(login));
