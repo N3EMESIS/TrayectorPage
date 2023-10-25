@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getAllCourses, getUserDataByEmail, orderAndFilter } from '../../Redux/Actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { Courses } from '../../Components/Courses/Courses';
+import Courses from '../../Components/Courses/Courses';
 // import styles from 'Cursos.module.css';
 
 const Cursos = () => {
     const dispatch = useDispatch();
     const courses = useSelector((state) => state.courses);
+    console.log(courses);
     const [filterByType, setFilterByType] = useState('');
     const [sort, setSort] = useState('');
     const [isLoading, setIsLoading] = useState(true);

@@ -1,0 +1,44 @@
+/* Product.css */
+.courseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+.courseDetailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+.courseImageContainer {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+.courseImage {
+    margin-top: -1em;
+    border-radius: 12%;
+    height: 150px;
+    width: 150px;
+    margin-left: 0.6em;
+  }
+  
+.courseInfoContainer {
+    margin-top: 6em;
+  }
+  
+.courseName {
+    font-weight: bold;
+    margin-top: -1em;
+  }
+  
+.coursePrice {
+    margin-top: -4px;
+  }
+
+.courseDescription {
+    margin: 0;
+}

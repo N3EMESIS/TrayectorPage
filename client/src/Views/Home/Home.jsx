@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Home.module.css';
 import { Link } from 'react-router-dom';
+import casoexito from './casoexito.png';
 
 const Home = () => {
     return(
@@ -15,10 +16,9 @@ const Home = () => {
             <div className={styles.divSeparator}>
                 <p className={styles.subtitle}>Te acompañamos de inicio a fin, desde conocer tus ideas, problemas, oportunidades de mejora y soluciones. Hasta implementar soluciones innovadoras de la mano, en ese proceso te capacitamos y dotamos de experiencias para que puedas hacerlo independientemente; y por si fuera poco buscamos financiamiento en calidad de donación para apalancar tus innovaciones y tecnologías aplicadas a contextos reales.</p>
             </div>
-            <img src='https://i.postimg.cc/fLhVPnzd/CASO-DE-XITO-WEB.png' alt='casoDeExito' widt='300px' height='300px' />
+            <img src={casoexito} alt='casoDeExito' widt='300px' height='300px' />
             <h4 className={styles.subtittle}>SOMOS UN EQUIPO QUE TE ACOMPAÑA DE FORMA INTEGRAL</h4>
             <br />
-            {/* <h3 className={styles.tittle}>CADA SERVICIO ES UN CASO DE ÉXITO.</h3> */}
             <div className={styles.gridContainer}>
                 <div className={styles.Div45}>
                     <div className={styles.div4}>

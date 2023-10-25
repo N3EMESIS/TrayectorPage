@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Poppins-semibold';
+    src: url('../../../public/fonts/poppins/Poppins-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../../../public/fonts/poppins/Poppins-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-black';
+    src: url('../../../public/fonts/poppins/Poppins-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.frameworkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittle {
+    font-family: 'Poppins-black';
+    color: #EC671B;
+    margin: 0;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.subtittle {
+    font-family: 'Poppins-semibold';
+    color: #EC671B;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.text {
+    font-family: 'Poppins-regular';
+    font-size: 16px
+}
+
+.link {
+    text-decoration: none;
+    color: #ec671b;
+    transition: transform 0.2s linear;
+}
+
+.link:hover {
+    transform: scale(1.1);
+}
+
+/*! ------------------------------------------------------------------------------------------------------------- !*/
+
+.separator1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 35px;
+}
+
+.service1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 60%;
+}
+
+.bg1 {
+    background: linear-gradient(to left, #3663AD 70%, white 30%);
+    width: 50%;
+}
+
+.image1 {
+    position: relative;
+    top: 50px;
+    right: 100px;
+}
+
+/*! ------------------------------------------------------------------------------------ !*/
+
+.separator2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    margin-right: 35px;
+}
+
+.service2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: right;
+    width: 60%;
+}
+
+.bg2 {
+    width: 50%;
+    background: linear-gradient(to right, #3663AD 70%, white 30%);
+}
+
+.image2 {
+    position: relative;
+    top: 70px;
+    left: 100px;
+}
+
+/*! ---------------------------------------------------------------------------------------- !*/
+
+.separator3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+.service3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 60%;
+}
+
+.bg3 {
+    width: 50%;
+    background: linear-gradient(to left, #3663AD 70%, white 30%);
+}
+
+.image3 {
+    position: relative;
+    right: 100px;
+    top: 100px;
+}
+
+/*! ------------------------------------------------------------------------- !*/
+
+.separator4 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    margin-right: 35px;
+}
+
+.service4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: right;
+    width: 50%;
+}
+
+.bg4 {
+    width: 50%;
+    background: linear-gradient(to right, #3663AD 70%, white 30%);
+}
+
+.image4 {
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+
+/*! ---------------------------------------------------------------------------- !*/
+
+.separator5 {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-left: 35px;
+    margin-bottom: 150px;
+}
+
+.service5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 50%;
+}
+
+.bg5 {
+    width: 50%;
+    background: linear-gradient(to left, #3663AD 70%, white 30%);
+}
+
+.image5 {
+    position: relative;
+    right: 100px;
+    top: 20px;
+}

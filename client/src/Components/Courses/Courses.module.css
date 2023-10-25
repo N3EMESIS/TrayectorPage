@@ -1,0 +1,27 @@
+.container {
+    margin: 20px;
+  }
+  
+.divider {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .courseCard {
+    border-radius: 5px;
+    background-color: #d8d8d8;
+    width: 200px;
+    height: 22em;
+    max-width: 200px;
+    max-height: 22em;
+    margin-bottom: 3em;
+    padding-top: 1.5em;
+    transition: transform 0.3s;
+  }
+  
+  .courseCard:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  

@@ -38,10 +38,12 @@ import {
 
 import Pop_up from "../../Utils/Pop_up/Pop_up";
 
+const http = 'http://localhost:3001';
+
 export const createCourse = (course) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/product`, course);
+			const res = await axios.post(`${http}/course`, course);
 			const newOrder = res.data;
 			Pop_up(
 				"Realizado",
@@ -59,7 +61,7 @@ export const createCourse = (course) => {
 export const getAllCourses = () => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/course`);
+			const res = await axios.get(`${http}/course`);
 			const courses = res.data;
 			dispatch({ type: GET_ALL_COURSES, payload: courses });
 		} catch (error) {
@@ -79,7 +81,7 @@ export function setCourseSearch(searchResult) {
 export const getCourseById = (id_course) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/course/${id_course}`);
+			const res = await axios.get(`${http}/course/${id_course}`);
 			const course = res.data;
 			dispatch({ type: GET_COURSE_BY_ID, payload: course });
 		} catch (error) {
@@ -122,7 +124,7 @@ export const changePage = (number) => {
 export const createOrder = (order) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/order`, order);
+			const res = await axios.post(`${http}/order`, order);
 			const newOrder = res.data;
 			return dispatch({ type: CREATE_ORDER, payload: newOrder });
 		} catch (error) {
@@ -136,7 +138,7 @@ export const getClientOrders = (id_client) => {
 	//El id del cliente
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/client/orders/${id_client}`);
+			const res = await axios.get(`${http}/client/orders/${id_client}`);
 			const orders = res.data;
 			return dispatch({ type: GET_CLIENT_ORDERS, payload: orders });
 		} catch (error) {
@@ -148,7 +150,7 @@ export const getOrders = () => {
 	//El id del cliente
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/order`);
+			const res = await axios.get(`${http}/order`);
 			const allOrders = res.data;
 			return dispatch({ type: GET_ORDERS, payload: allOrders });
 		} catch (error) {
@@ -160,7 +162,7 @@ export const getOrders = () => {
 export const getOrderDetail = (id_order) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/order/${id_order}`);
+			const res = await axios.get(`${http}/order/${id_order}`);
 			const order = res.data;
 			return dispatch({ type: GET_ORDER_BY_ID, payload: order });
 		} catch (error) {
@@ -173,7 +175,7 @@ export const getOrderDetail = (id_order) => {
 export const validateLogin = (user) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`http://localhost:3001/client/checkclient`, user);
+			const res = await axios.post(`${http}/client/checkclient`, user);
 			const userDB = res.data;
 			return dispatch({ type: VALIDATE_LOGIN, payload: userDB });
 		} catch (error) {
@@ -184,7 +186,7 @@ export const validateLogin = (user) => {
 export const validateAdminLogin = (admin) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/admin/checkadmin`, admin);
+			const res = await axios.post(`${http}/admin/checkadmin`, admin);
 			const adminDB = res.data;
 			return dispatch({ type: VALIDATE_ADMIN_LOGIN, payload: adminDB });
 		} catch (error) {
@@ -205,7 +207,7 @@ export const adminLogOut = () => {
 export const getUserDataByEmail = (email) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/client?email=${email}`);
+			const res = await axios.get(`${http}/client?email=${email}`);
 			const userData = res.data;
 			return dispatch({ type: VALIDATE_LOGIN, payload: userData });
 		} catch (error) {
@@ -218,7 +220,7 @@ export const getUserDataByEmail = (email) => {
 export const registerUser = (user) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`http://localhost:3001/client`, user);
+			const res = await axios.post(`${http}/client`, user);
 			const userDB = res.data;
 			return dispatch({ type: REGISTER_USER, payload: userDB });
 		} catch (error) {
@@ -231,7 +233,7 @@ export const registerUser = (user) => {
 export const deleteOrder = (order_id) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.delete(`/order/${order_id}`);
+			const res = await axios.delete(`${http}/order/${order_id}`);
 			const orderDB = res.data;
 			return dispatch({ type: DELETE_ORDER, payload: orderDB });
 		} catch (error) {
@@ -243,7 +245,7 @@ export const deleteOrder = (order_id) => {
 export const validateUserExistenceInDb = (email) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/client/checkclient/`, email);
+			const res = await axios.post(`${http}/client/checkclient/`, email);
 			const userData = res.data;
 			console.log(userData);
 			return dispatch({ type: VALIDATE_LOGIN, payload: userData });
@@ -257,7 +259,7 @@ export const validateUserExistenceInDb = (email) => {
 export const updateOrder = (newOrder) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.patch(`/order/`, newOrder);
+			const res = await axios.patch(`${http}/order/`, newOrder);
 			const orderDB = res.data;
 			return dispatch({ type: UPDATE_ORDER, payload: orderDB });
 		} catch (error) {
@@ -270,7 +272,7 @@ export const updateOrder = (newOrder) => {
 export const getClientData = (client_id) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/client/${client_id}`);
+			const res = await axios.get(`${http}/client/${client_id}`);
 			const clientDB = res.data;
 			return dispatch({ type: GET_CLIENT_DATA, payload: clientDB });
 		} catch (error) {
@@ -287,7 +289,7 @@ export const cleanClient_Id = () => {
 export const updateClientData = (client_id, newData) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.patch(`/client/${client_id}`, newData);
+			const res = await axios.patch(`${http}/client/${client_id}`, newData);
 			const clientDataDB = res.data;
 			return dispatch({ type: UPDATE_CLIENT_DATA, payload: clientDataDB });
 		} catch (error) {
@@ -300,7 +302,7 @@ export const updateClientData = (client_id, newData) => {
 export const deleteClient = (client_id) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.delete(`/client/${client_id}`);
+			const res = await axios.delete(`${http}/client/${client_id}`);
 			const clientDB = res.data;
 			return dispatch({ type: DELETE_CLIENT, payload: clientDB });
 		} catch (error) {
@@ -314,7 +316,7 @@ export const orderAndFilter = (filterByType, sort) => {
 	return async function (dispatch) {
 		try {
 			const res = await axios.get(
-				`/product?filterByType=${filterByType}&sort=${sort}`
+				`${http}/course?filterByType=${filterByType}&sort=${sort}`
 			);
 			const filterProducts = res.data;
 			return dispatch({ type: ORDER_FILTER, payload: filterProducts });
@@ -340,7 +342,7 @@ export const logoutUser = () => {
 export const getAllClients = () => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/client`);
+			const res = await axios.get(`${http}/client`);
 			const clients = res.data;
 			dispatch({ type: GET_ALL_CLIENTS, payload: clients });
 		} catch (error) {
@@ -352,7 +354,7 @@ export const getAllClients = () => {
 export const getMercadoPagoLink = (emailAndProducts) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.post(`/payment`, emailAndProducts);
+			const res = await axios.post(`${http}/payment`, emailAndProducts);
 			const MPLink = res.data;
 			return dispatch({ type: GET_MP_LINK, payload: MPLink });
 		} catch (error) {
@@ -367,7 +369,7 @@ export const sendEmail = (form, type) => {
 			form = { ...form, type };
 		} else throw new Error("Type is missing.");
 		try {
-			const res = await axios.post(`/mail`, form);
+			const res = await axios.post(`${http}/mail`, form);
 		} catch (error) {
 			console.log(error);
 		}
@@ -381,7 +383,7 @@ export const ChangeLabel = (id) => {
 export const getAllClientsAdmin = () => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/getadmin/clients`);
+			const res = await axios.get(`${http}/getadmin/clients`);
 			const clients = res.data;
 			dispatch({ type: GET_ALL_ADMIN_CLIENTS, payload: clients });
 		} catch ({response}) {
@@ -393,7 +395,7 @@ export const getAllClientsAdmin = () => {
 export const getAllCoursesAdmin = () => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.get(`/getadmin/courses`);
+			const res = await axios.get(`${http}/getadmin/courses`);
 			const courses = res.data;
 			dispatch({ type: GET_ALL_COURSES_CLIENTS, payload: courses });
 		} catch ({response}) {
@@ -405,7 +407,7 @@ export const getAllCoursesAdmin = () => {
 export const deleteCourseAdmin = (id) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.delete(`/course/${id}`);
+			const res = await axios.delete(`${http}/course/${id}`);
 			const course = res.data;
 			dispatch({ type: DELETE_COURSE_ADMIN, payload: course });
 		} catch ({response}) {
@@ -419,7 +421,7 @@ export const deleteCourseAdmin = (id) => {
 export const updateCourse = (updatedCourse, id) => {
 	return async function (dispatch) {
 		try {
-			const res = await axios.patch(`/product/${id}`, updatedCourse);
+			const res = await axios.patch(`${http}/course/${id}`, updatedCourse);
 			const course = res.data;
 			dispatch({ type: UPDATE_COURSE, payload: course });
 		} catch (error) {
