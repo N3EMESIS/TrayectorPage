@@ -37,11 +37,25 @@ const Cursos = () => {
     };
 
     return(
-        <div className='{styles.container}'>
-            <div className='{styles.titleContainer}'>
-                <h1 className='{styles.title}'>Cursos</h1>
+        <div className={styles.container}>
+            <h1 className={styles.title}>Cursos Trayector</h1>
+            <div className={styles.pasosContainer}>
+                <div className={styles.paso1}>
+                    <img src='' alt='paso1' />
+                    <p>Eleji tu curso</p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.paso2}>
+                    <img src='' alt='paso2' />
+                    <p>Realiza el pago de tu matricula</p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.paso3}>
+                    <img src='' alt='paso3' />
+                    <p>Listo para iniciar tu curso!</p>
+                </div>
             </div>
-            <div className='{styles.filterContainer}'>
+            {/* <div className='{styles.filterContainer}'>
                 <select className='{styles.selectType}' onChange={handleFilter}>
                     <option value=''>Todos</option>
                     <option value=''></option>
@@ -56,13 +70,13 @@ const Cursos = () => {
                     <option value='Menor precio'>Mayor precio</option>
                     <option value='Mayor precio'>Menor precio</option>
                 </select>
-            </div>
+            </div> */}
             {isLoading ? (
-                <div className='{styles.divLoading}'>
-                    <div className='{styles.spinner}'></div>
+                <div className={styles.divLoading}>
+                    <div className={styles.spinner}></div>
                 </div>
             ) : (
-                <div className='{styles.coursesContainer}'>
+                <div className={styles.coursesContainer}>
                     <Courses courses={courses} />
                 </div>
             )}

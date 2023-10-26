@@ -7,23 +7,25 @@ import styles from './Course.module.css';
 const Course = ({ nombre, imagen, precio, descripcion, id }) => {
 
     return (
-        <div className={styles.container}>
-            <Link to={`/detail/${id}`} style={{ textDecoration: 'none' }}>
-                <div className={styles.courseImageContainer}>
-                    <img className={styles.courseImage} src={imagen} alt={nombre} />
+        <div className={styles.container} id={id}>
+            <div className={styles.courseImageContainer}>
+                <img className={styles.courseImage} src={imagen} alt={nombre} />
+            </div>
+            <div className={styles.courseInfoContainer}>
+                <div className={styles.courseName}>
+                    <p className={styles.nombre}>{nombre}</p>
                 </div>
-                <div className={styles.courseInfoContainer}>
-                    <div className={styles.courseName}>
-                        {nombre}
-                    </div>
-                    <div className={styles.coursePrice}>
-                        $ {parseInt(precio)}
-                    </div>
-                    <div className={styles.courseDescription}>
-                        {descripcion}
-                    </div>
+                <div className={styles.courseDescription}>
+                    <p className={styles.description}>{descripcion}</p>
                 </div>
-            </Link>
+                <div className={styles.coursePrice}>
+                    <p className={styles.price}>$ {parseInt(precio)}</p>
+                </div>
+            </div>
+            <div className={styles.courseLink}>
+                <button className={styles.registerButton}>Registrarme</button>
+                <button className={styles.classButton}>Clases en vivo</button>
+            </div>
         </div>
     )
 }
