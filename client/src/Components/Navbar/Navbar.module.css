@@ -102,3 +102,37 @@
 .link--active {
     background-color: #EC671B !important;
 }
+
+@media screen and (max-width: 1280px) {
+    .container {
+        font-size: 15px;
+    }
+
+    .divLeft {
+        width: 500px;
+    }
+
+    .divRight {
+        padding: 45px;
+    }
+
+    .rightContainer {
+        width: 55%;
+        position: absolute;
+        display: flex;
+        left: 570px;
+        gap: 25px;
+    }
+
+    .divStyle {
+        left: 343px;
+    }
+
+    .box, .box .vector {
+        width: 100%;
+    }
+
+    .image {
+        margin-left: 75px;
+    }
+}

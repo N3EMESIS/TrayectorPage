@@ -163,3 +163,21 @@
     height: 100px;
     border-top: 5px solid #EC671B;
 }
+
+@media screen and (max-width: 1280px) {
+    .divSeparator1 {
+        top: 129px;
+    }
+
+    .divSeparator2 {
+        top: 79px;
+    }
+
+    .divSeparator3 {
+        top: 204px;
+    }
+
+    .divSeparator4 {
+        top: 54px;
+    }
+}

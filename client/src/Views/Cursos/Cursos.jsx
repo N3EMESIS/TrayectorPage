@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getAllCourses, getUserDataByEmail, orderAndFilter } from '../../Redux/Actions/actions';
+import { getAllCourses, orderAndFilter } from '../../Redux/Actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Courses from '../../Components/Courses/Courses';
-// import styles from 'Cursos.module.css';
+import styles from './Cursos.module.css';
 
 const Cursos = () => {
     const dispatch = useDispatch();
@@ -66,11 +66,6 @@ const Cursos = () => {
                     <Courses courses={courses} />
                 </div>
             )}
-            <ul>
-                <li>Curso1</li>
-                <li>Curso2</li>
-                <li>Curso3</li>
-            </ul>
         </div>
     )
 }
