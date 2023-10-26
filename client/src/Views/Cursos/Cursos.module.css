@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pasosContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.paso1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.paso2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.paso3 {
+    display: flex;
+    flex-direction: column;
+}
+.coursesContainer {
+    display: flex;
+    justify-content: center;
+}
