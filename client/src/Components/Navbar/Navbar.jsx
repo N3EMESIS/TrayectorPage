@@ -13,7 +13,7 @@ const Navbar = () => {
 
     useEffect(() => {
         setActiveLink(location.pathname);
-    }, [location]);
+    }, [location.pathname]);
 
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <Link className={`${styles.link} ${activeLink === '/cursos' && styles['link--active']}`} to='/cursos'>Academia Trayector</Link>
                     <Link className={`${styles.link} ${activeLink === '/contacto' && styles['link--active']}`} to='/contacto'>Contacto</Link>
                     {token === null ? (
-                        <Link className={`${styles.link} ${activeLink === '/login' && styles['link--active']}`} to='/loginOrRegister'>Iniciar Sesión</Link>
+                        <Link className={`${styles.link} ${activeLink === '/loginOrRegister' && styles['link--active']}`} to='/loginOrRegister'>Iniciar Sesión</Link>
                     ) : (
                         <Link className={`${styles.link} ${activeLink === '/perfil' && styles['link--active']}`} to='/myProfile'>Perfil</Link>
                     )}

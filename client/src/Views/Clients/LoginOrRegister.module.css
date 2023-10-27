@@ -1,26 +1,16 @@
 @font-face {
     font-family: 'Poppins-regular';
     src: url('../../../public/fonts/poppins/Poppins-Regular.woff') format('woff');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Poppins-black';
-    src: url('../../../public/fonts/poppins/Poppins-Black.woff') format('woff');
+    font-family: 'Poppins-bold';
+    src: url('../../../public/fonts/poppins/Poppins-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
-
-
-@font-face {
-    font-family: 'Poppins-semibold';
-    src: url('../../../public/fonts/poppins/Poppins-SemiBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-
 
 .container {
     display: flex;
@@ -32,6 +22,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
+    font-family: 'Poppins-regular';
 }
 
 .loginContainer {
@@ -45,11 +36,16 @@
     margin: 0;
 }
 
+.title {
+    font-family: 'Poppins-bold';
+}
+
 .registerButton {
     border: none;
     background: none;
     color: #3663ad;
     transition: transform 0.2s;
+    border-radius: 5px;
 }
 
 .registerButton:hover {
@@ -110,6 +106,7 @@
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .submitButton:hover {
@@ -124,6 +121,7 @@
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .buttonRegister:hover {
@@ -132,6 +130,6 @@
 
 @media screen and (max-width: 1280px) {
     .container {
-        height: 60.40vw;
+        height: 57.90vw;
     }
 }

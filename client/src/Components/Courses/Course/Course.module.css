@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('../../../../public/fonts/poppins/Poppins-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../../../../public/fonts/poppins/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .courseContainer {
     display: flex;
@@ -30,13 +43,14 @@
   
 .courseInfoContainer {
     margin-top: 15px;
-    color: #EC671B;
+    color: #fff;
     text-align: left;
     margin-left: 20px;
+    font-family: 'Poppins-regular';
 }
   
 .courseName {
-    font-weight: bold;
+    font-family: 'Poppins-bold';
     margin-top: -1em;
 }
   
@@ -54,6 +68,9 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    position: absolute;
+    margin-top: calc(155px + 10vh);
+    margin-left: calc(90px + 1vw);
 }
 
 .registerButton {

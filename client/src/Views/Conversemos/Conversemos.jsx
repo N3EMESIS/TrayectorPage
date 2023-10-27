@@ -18,7 +18,7 @@ const Conversemos = () => {
     return(
         <div className={styles.container}>
             <div data-tf-live="01HCQ27ZYM9Z3ZSTN4NQEXY3EV" className={styles.container}></div>
-            <h3>Si prefieres puedes escribirnos a <a href=''>Whatsapp</a>{/* link wsp */} o contactar directamente con Diego:</h3>
+            <h3 className={styles.wsp}>Si prefieres puedes escribirnos a <a className={styles.link} href=''>Whatsapp</a>{/* link wsp */} o contactar directamente con Diego:</h3>
             <div className={styles.contactContainer}>
                 <img src={diego} alt={'contact'} width='20%' />
                 <div className={styles.divider}>

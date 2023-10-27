@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Poppins-semibold';
+    src: url('../../../public/fonts/poppins/Poppins-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../../../public/fonts/poppins/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container {
     width: 100%;
 }
@@ -12,4 +26,14 @@
 .divider {
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins-semibold';
+}
+
+.wsp {
+    font-family: 'Poppins-regular';
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
 }
