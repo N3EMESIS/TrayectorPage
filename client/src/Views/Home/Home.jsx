@@ -22,32 +22,32 @@ const Home = () => {
             <div className={styles.gridContainer}>
                 <div className={styles.Div45}>
                     <div className={styles.div4}>
-                        <p><b >CONSULTORIA TECNICA ESPECIALIZADA </b><br /> <br />Buscas un aliado especializado, en vigilancia tecnológica, hojas de ruta, sistema de gestión de la innovación, diseño de programas de innovación abierta, estudios de propiedad intelectual, estudios de mercado y demás. <br />  <br /></p>
+                        <p className={styles.p}><span className={styles.titleService}>CONSULTORIA TECNICA ESPECIALIZADA </span><br /> <br />Buscas un aliado especializado, en vigilancia tecnológica, hojas de ruta, sistema de gestión de la innovación, diseño de programas de innovación abierta, estudios de propiedad intelectual, estudios de mercado y demás. <br />  <br /></p>
                         <div className={styles.divSeparator1}>
                             <Link to='/servicios#servicio4' className={styles.linkTo}>Ver mas</Link>
                         </div> 
                     </div>
                     <div className={styles.div5}>
-                        <p><b >ACADEMIA TRAYECTOR</b> <br /> <br />Quieres aprender a formular y concursar a ganador en los fondos concursables de PROINNOVATE, quieres emprender en el mundo de consultoría y ser formulador de proyectos, quieres aprender a ejecutar estos proyectos co financiados por PROINNOVATE, quieres fortalecer capacidades y ser mas rentable; preparate y entrena con los mejores. <br /> <br /></p>
+                        <p className={styles.p}><span className={styles.titleService}>ACADEMIA TRAYECTOR </span> <br /> <br />Quieres aprender a formular y concursar a ganador en los fondos concursables de PROINNOVATE, quieres emprender en el mundo de consultoría y ser formulador de proyectos, quieres aprender a ejecutar estos proyectos co financiados por PROINNOVATE, quieres fortalecer capacidades y ser mas rentable; preparate y entrena con los mejores. <br /> <br /></p>
                         <div className={styles.divSeparator2}>
                             <Link to='/servicios#servicio5' className={styles.linkTo}>Ver mas</Link>
                         </div>
                     </div>
                 </div>
                 <div className={styles.div1}>
-                    <p><b >FONDOS CONCURSABLES </b><br /> <br />Financia tu innovación y transformación digital. <br /> <br /></p>
+                    <p className={styles.p}><span className={styles.titleService}>FONDOS CONCURSABLES </span><br /> <br />Financia tu innovación y transformación digital. <br /> <br /></p>
                     <div className={styles.divSeparator3}>
                         <Link to='/servicios#servicio1' className={styles.linkTo}>Ver mas</Link>
                     </div>
                 </div>
                 <div className={styles.div2}>
-                    <p><b >INNOVACION ABIERTA </b><br /> <br />No reinventemos la polvora, tencología y soluciones ya existen; solo es necesario encontrar aquellas solucionadores que ya las tienen y las adecuamos a nuestra empresa. Te ayudamos a lograrlo. <br /><br /> </p>
+                    <p className={styles.p}><span className={styles.titleService}>INNOVACION ABIERTA </span><br /> <br />No reinventemos la polvora, tencología y soluciones ya existen; solo es necesario encontrar aquellas solucionadores que ya las tienen y las adecuamos a nuestra empresa. Te ayudamos a lograrlo. <br /><br /> </p>
                     <div className={styles.divSeparator4}>
                         <Link to='/servicios#servicio2' className={styles.linkTo}>Ver mas</Link>
                     </div>
                 </div>
                 <div className={styles.div3}>
-                    <p><b >TRANSFORMACION DIGITAL</b> <br /> <br />No solo es implementar tecnología, hay que entender la estrategia, cultura, liderazgo, procesos y demás para que realmente funcione. ¿Queremos digitalizarnos?, hagamoslo de forma estratégica, efectiva y disfrutemos del proceso de transformación digital. <br /><br /> </p>
+                    <p className={styles.p}><span className={styles.titleService}>TRANSFORMACION DIGITAL</span> <br /> <br />No solo es implementar tecnología, hay que entender la estrategia, cultura, liderazgo, procesos y demás para que realmente funcione. ¿Queremos digitalizarnos?, hagamoslo de forma estratégica, efectiva y disfrutemos del proceso de transformación digital. <br /><br /> </p>
                     <div className={styles.divSeparator5}>
                         <Link to='/servicios#servicio3' className={styles.linkTo}>Ver mas</Link>
                     </div>

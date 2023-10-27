@@ -112,7 +112,7 @@ const LoginOrRegister = () => {
         <div className={styles.container}>
             {isLogin ? (
                 <div className={styles.loginContainer}>
-                    <h1>Iniciar Sesión</h1>
+                    <h1 className={styles.title}>Iniciar Sesión</h1>
                     <form onSubmit={handleLogin}>
                         <input type='text' className={styles.input} placeholder='Email' onChange={changeHandler} name='email' value={login.email} />
                         {errors.email && <p>{errors.email}</p>}
@@ -126,6 +126,7 @@ const LoginOrRegister = () => {
             ) : (
                 <div className={styles.registerContainer}>
                     <FontAwesomeIcon icon={faArrowLeft} className={styles.backIcon} onClick={goBackToLogin} />
+                    <h1 className={styles.title}>Registrarse</h1>
                     <form onSubmit={handleSubmit}>
                         <div className={styles.div1}>
                             <p>Email</p>

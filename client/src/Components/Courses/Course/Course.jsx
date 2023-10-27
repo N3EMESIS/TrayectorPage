@@ -24,7 +24,6 @@ const Course = ({ nombre, imagen, precio, descripcion, id }) => {
             </div>
             <div className={styles.courseLink}>
                 <button className={styles.registerButton}>Registrarme</button>
-                <button className={styles.classButton}>Clases en vivo</button>
             </div>
         </div>
     )
