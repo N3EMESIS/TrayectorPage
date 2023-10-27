@@ -9,7 +9,7 @@ const Home = () => {
             <div className={styles.imageContainer}>
                 <img src='https://i.postimg.cc/Gt498czZ/Imagen-Portada.jpg' alt='bgImage' height='500px' />
                 <div className={styles.textOverlay}>
-                    <h1 className={styles.text}>ORQUESTAMOS LA INNOVACIÓN <br /> <span className={styles.text1}> Y LA TRANSFORMACION DIGITAL A NUESTROS CLIENTES.</span></h1>
+                    <h1 className={styles.text}>ORQUESTAMOS LA INNOVACIÓN <br /> <span className={styles.text1}> Y LA TRANSFORMACIÓN DIGITAL A NUESTROS CLIENTES.</span></h1>
                 </div>
             </div>
             <br />

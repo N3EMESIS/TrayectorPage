@@ -72,20 +72,20 @@
 
 .text {
     font-family: 'Poppins-bold';
-    font-size: 30px;
+    font-size: 45px;
     color: #fff;
     padding: 10px;
     text-shadow: 1px 1px 1px #000;
 }
 
 .text1 {
-    font-family: 'Poppins-bold';
+    font-family: 'Poppins-regular';
     font-size: 20px;
 }
 
 .subtitle {
     font-family: 'Poppins-regular';
-    font-size: 18px;
+    font-size: 15px;
     color: #000;
 }
 

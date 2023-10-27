@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Poppins-extraBold';
-    src: url('../../../public/fonts/poppins/Poppins-ExtraBold.woff') format('woff');
+    font-family: 'Poppins-Bold';
+    src: url('../../../public/fonts/poppins/Poppins-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
     align-items: center;
     margin: 0;
     width: 100%;
-    font-family: 'Poppins-extraBold';
+    font-family: 'Poppins-Bold';
     font-size: 18px;
 }
 
@@ -48,9 +48,9 @@
     width: 55%;
     position: absolute;
     display: flex;
-    top: 32px;
-    left: 750px;
-    gap: 25px;
+    top: 30px;
+    left: 620px;
+    gap: 30px;
     z-index: 5;
 }
 
@@ -91,8 +91,8 @@
     text-decoration: none;
     color: #fff;
     background-color: transparent;
-    padding: 2px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .link:hover {

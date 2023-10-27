@@ -42,6 +42,7 @@
 }
 
 .titleImage {
+  font-family: 'Poppins-black';
   position: relative;
   top: -450px;
   font-size: 70px;
@@ -95,12 +96,12 @@
 .title {
   font-family: 'Poppins-bold';
   color: #EC671B;
-  text-shadow: 1px 1px 1px #000;
 }
 
 .subtitle {
   font-family: 'Poppins-regular';
-  font-size: 19px;
+  font-size: 17px;
+  margin-bottom: 50px;
 }
 
 .name {
@@ -109,6 +110,6 @@
 }
 
 .p {
-  font-family: 'Poppins-semibold';
+  font-family: 'Poppins-regular';
   font-size: 17px;
 }
