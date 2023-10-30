@@ -45,6 +45,7 @@
     width: 80%;
     height: 500px;
 }
+
 .tittle {
     font-family: 'Poppins-black';
     color: #EC671B;
@@ -53,17 +54,26 @@
     line-height: 1;
 }
 
-.subtittle {
-    font-family: 'Poppins-semibold';
-    color: #EC671B;
+.title {
+    font-family: 'Poppins-black';
+    color: #3663AD;
     margin: 0;
-    font-size: 20px;
-    line-height: 1;
+    font-size: 25px;
+}
+
+.subtittle {
+    font-family: 'Poppins-regular';
+    color: #ec671b;
+    margin: 0;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 .text {
     font-family: 'Poppins-regular';
-    font-size: 15px
+    font-size: 15px;
+    color: #ec671b
 }
 
 .link {
@@ -103,7 +113,7 @@
     color: #fff;
     border-radius: 20px;
     padding: 15px;
-    padding-top: 350px;
+    padding-top: 150px;
 }
 
 .bg1, .bg2, .bg3, .bg4, .bg5 {
@@ -135,3 +145,31 @@
     margin-left: 100px;
 }
 
+.service1 {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+}
+
+.service2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    position: relative;
+    background-color: #fff;
+    margin: 15px;
+}
+
+.divider > p:last-child {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s linear, opacity 0.5s ease;
+}
+
+.divider:hover > p:last-child {
+    max-height: 150px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.1s ease;
+}
