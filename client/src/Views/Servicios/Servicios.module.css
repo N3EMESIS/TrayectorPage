@@ -41,6 +41,10 @@
     align-items: center;
 }
 
+.mainImage {
+    width: 80%;
+    height: 500px;
+}
 .tittle {
     font-family: 'Poppins-black';
     color: #EC671B;

@@ -35,7 +35,7 @@ const Servicios = () => {
 
     return(
         <div className={styles.mainContainer}>
-            <img src={casoexito} alt='caso de exito' width='80%' height='500px' />
+            <img className={styles.mainImage} src={casoexito} alt='caso de exito' />
             <div className={styles.container}>
                 <div className={styles.separator}>
                     <div className={styles.separator1}>
