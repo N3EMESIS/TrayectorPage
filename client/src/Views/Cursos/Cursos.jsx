@@ -9,17 +9,17 @@ const Cursos = () => {
     const dispatch = useDispatch();
     const courses = useSelector((state) => state.courses);
     console.log(courses);
-    const [filterByType, setFilterByType] = useState('');
-    const [sort, setSort] = useState('');
+    // const [filterByType, setFilterByType] = useState('');
+    // const [sort, setSort] = useState('');
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         dispatch(getAllCourses());
     }, []);
 
-    useEffect(() => {
-        dispatch(orderAndFilter(filterByType, sort));
-    }, [filterByType, sort]);
+    // useEffect(() => {
+    //     dispatch(orderAndFilter(filterByType, sort));
+    // }, [filterByType, sort]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -29,13 +29,13 @@ const Cursos = () => {
         return () => clearTimeout(timer);
     }, []);
 
-    const handleFilter = (e) => {
-        setFilterByType(e.target.value);
-    };
+    // const handleFilter = (e) => {
+    //     setFilterByType(e.target.value);
+    // };
 
-    const handleSort = (e) => {
-        setSort(e.target.value);
-    };
+    // const handleSort = (e) => {
+    //     setSort(e.target.value);
+    // };
 
     return(
         <div className={styles.container}>
@@ -77,15 +77,9 @@ const Cursos = () => {
                     <option value='Mayor precio'>Menor precio</option>
                 </select>
             </div> */}
-            {isLoading ? (
-                <div className={styles.divLoading}>
-                    <div className={styles.spinner}></div>
-                </div>
-            ) : (
-                <div className={styles.coursesContainer}>
-                    <Courses courses={courses} />
-                </div>
-            )}
+            <div className={styles.coursesContainer}>
+                <Courses courses={courses} />
+            </div>
         </div>
     )
 }

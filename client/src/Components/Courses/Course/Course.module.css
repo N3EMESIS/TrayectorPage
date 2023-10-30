@@ -69,7 +69,7 @@
     align-items: center;
     gap: 15px;
     position: absolute;
-    margin-top: calc(155px + 10vh);
+    margin-top: calc(150px + 1vh);
     margin-left: calc(90px + 1vw);
 }
 
@@ -88,3 +88,17 @@
     text-decoration: none;
     border: none;
 }
+
+@media screen and (max-width: 1280px) {
+    .courseLink {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        margin-top: calc(150px + 1vh);
+        margin-left: calc(90px + 1vw);
+    }
+}
+

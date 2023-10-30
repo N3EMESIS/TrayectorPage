@@ -9,7 +9,7 @@ import {
   Cursos,
   Conversemos,
   LoginOrRegister,
-} from './Views/index'
+} from './Views/index';
 
 function App() {
   

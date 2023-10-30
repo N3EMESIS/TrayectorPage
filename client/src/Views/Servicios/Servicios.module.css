@@ -27,8 +27,12 @@
 .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     overflow: hidden;
-    margin-top: 150px;
+    margin-top: 260px;
+    width: 90%;
+    gap: 20px;
 }
 
 .frameworkContainer {
@@ -41,7 +45,7 @@
     font-family: 'Poppins-black';
     color: #EC671B;
     margin: 0;
-    font-size: 60px;
+    font-size: 25px;
     line-height: 1;
 }
 
@@ -55,7 +59,7 @@
 
 .text {
     font-family: 'Poppins-regular';
-    font-size: 16px
+    font-size: 15px
 }
 
 .link {
@@ -70,140 +74,61 @@
 
 /*! ------------------------------------------------------------------------------------------------------------- !*/
 
-.separator1 {
+.separator {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 35px;
+    gap: 20px;
+    margin-bottom: 100px;
 }
 
-.service1 {
+.separato {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    width: 60%;
+    gap: 20px;
+}
+
+.separator1, .separator2 {
+    flex: 1;
+}
+
+.separator3, .separator4, .separator5 {
+    flex: 2;
+}
+
+
+.separator1, .separator2, .separator3, .separator4, .separator5 {
+    background-color: #3663AD;
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    padding-top: 150px;
+}
+
+.bg1, .bg2, .bg3, .bg4, .bg5 {
+    position: absolute;
 }
 
 .bg1 {
-    background: linear-gradient(to left, #3663AD 70%, white 30%);
-    width: 50%;
-}
-
-.image1 {
-    position: relative;
-    top: 50px;
-    right: 100px;
-}
-
-/*! ------------------------------------------------------------------------------------ !*/
-
-.separator2 {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 50px;
-    margin-right: 35px;
-}
-
-.service2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: right;
-    width: 60%;
+    margin-top: -260px;
+    margin-left: 200px;
 }
 
 .bg2 {
-    width: 50%;
-    background: linear-gradient(to right, #3663AD 70%, white 30%);
-}
-
-.image2 {
-    position: relative;
-    top: 70px;
-    left: 100px;
-}
-
-/*! ---------------------------------------------------------------------------------------- !*/
-
-.separator3 {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 50px;
-    margin-left: 35px;
-}
-
-.service3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    width: 60%;
+    margin-top: -240px;
+    margin-left: 220px;
 }
 
 .bg3 {
-    width: 50%;
-    background: linear-gradient(to left, #3663AD 70%, white 30%);
-}
-
-.image3 {
-    position: relative;
-    right: 100px;
-    top: 100px;
-}
-
-/*! ------------------------------------------------------------------------- !*/
-
-.separator4 {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 50px;
-    margin-right: 35px;
-}
-
-.service4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: right;
-    width: 50%;
+    margin-top: -250px;
+    margin-left: 100px;
 }
 
 .bg4 {
-    width: 50%;
-    background: linear-gradient(to right, #3663AD 70%, white 30%);
-}
-
-.image4 {
-    position: relative;
-    top: 20px;
-    left: 100px;
-}
-
-/*! ---------------------------------------------------------------------------- !*/
-
-.separator5 {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 50px;
-    margin-left: 35px;
-    margin-bottom: 150px;
-}
-
-.service5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    width: 50%;
+    margin-top: -235px;
+    margin-left: 120px;
 }
 
 .bg5 {
-    width: 50%;
-    background: linear-gradient(to left, #3663AD 70%, white 30%);
+    margin-top: -230px;
+    margin-left: 100px;
 }
 
-.image5 {
-    position: relative;
-    right: 100px;
-    top: 20px;
-}
+.service1 {}
