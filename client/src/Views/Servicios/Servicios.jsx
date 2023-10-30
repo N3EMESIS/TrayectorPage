@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Servicios.module.css';
-import casoexito from './images/casoexito.png';
+import casoexito from './casoexito.png';
 import trayectorFramework from './images/framework trayector.jpg'
 import dinero from './images/DINERO.png';
 import consultor from './images/consultor.png';
